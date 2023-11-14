@@ -22,12 +22,25 @@
         &-button {
           background-image: url("");
         }
+        &-input {
+          color: aqua;
+          text-decoration: aqua;
+        }
     }
 }
 
 // media-queries
-@media (min-width: 411px) {
-
+@media (min-width: 300px) {
+  .container-nav-search-input, .container-nav-search-button {
+    width: 50%;
+    height: 30px;
+    font-size: 15px;
+    background-image: url("/POKEAPI/styles/icons/fondopaisajes.jpeg");
+    color: whitesmoke;}
+.container-nav-search-button {
+    border-color: aqua;
+    border-radius: 5px 5px 5px 5px;
+}
 }
 @media (min-width: 576px) {
   .container-nav-search-input, .container-nav-search-button {
@@ -70,10 +83,34 @@
 @media (min-width: 1450px){
 }
 @media (min-width: 1625px){
+  .container-nav-search-input, .container-nav-search-button {
+    height: 60px;
+    font-size: 46px;
+    background-image: url("/POKEAPI/styles/icons/fondopaisajes.jpeg");
+    color: whitesmoke;}
+.container-nav-search-button {
+    border-color: aqua;
+    border-radius: 5px 5px 5px 5px;
+}
 }
 @media (min-width: 1750px){
 }
 @media (min-width: 1825px){
 }
-@media (min-width: 1900px){
+@media (min-width: 1920px){
+  .container-nav-search-input, .container-nav-search-button {
+    height: 60px;
+    font-size: 60px;
+    background-image: url("/POKEAPI/styles/icons/fondopaisajes.jpeg");
+    color: whitesmoke;}
+.container-nav-search-button {
+    border-color: aqua;
+    border-radius: 5px 5px 5px 5px;
+}
+}
+@media (min-width: 4000px){
+  .container-nav-search-input, .container-nav-search-button {
+    height: 80px;
+    font-size: 80px;
+  }
 }

@@ -188,6 +188,7 @@ init()
 
 //Eventos botones Filtros Typo y funcion busqueda//
 
+  //Prueba filtro boton, no consigo que pinte la ficha//
 async function lookForTypesBug () {
     try {
         const response = await fetch(baseUrl + "?limit=30");
@@ -205,6 +206,7 @@ const buttonBug$$ = document.querySelector(".container-item-filter-btn-bug");
 let valueTypesBug = buttonBug$$.getAttribute('id');
 buttonBug$$.addEventListener('click', lookForTypesBug);
 
+    //Resto de botones desactivados//
 // const buttonBug$$ = document.querySelector("#bug");
 // buttonBug$$.addEventListener('click', lookForTypes(pokeList));
 // const buttonDark$$ = document.querySelector('.container-item-filter-btn-dark');
@@ -218,23 +220,4 @@ buttonBug$$.addEventListener('click', lookForTypesBug);
 const reloaded = document.querySelector(".container-nav-pokeIcon");
 reloaded.addEventListener('click',init);
 
-    // async function getPokemon() {
-    //   const typeSelect = document.getElementById("typeSelect");
-    //   const selectedType = typeSelect.value;
-
-    //   const response = await fetch(`https://pokeapi.co/api/v2/type/${selectedType}`);
-    //   const data = await response.json();
-
-    //   if (response.ok) {
-    //     const pokemonList = data.pokemon.slice(0, 1); // Display only the first Pokemon for simplicity
-    //     const pokemonName = pokemonList[0].pokemon.name;
-
-    //     const pokemonInfoResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
-    //     const pokemonInfo = await pokemonInfoResponse.json();
-
-    //     displayPokemonCard(pokemonInfo);
-    //   } else {
-    //     alert(`Error fetching data for ${selectedType} type.`);
-    //   }
-    // }
 

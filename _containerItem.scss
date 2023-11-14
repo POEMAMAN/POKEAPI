@@ -90,7 +90,12 @@
 
 // media-queries
 @media (min-width: 411px) {
-
+    .container-item-filter-btn {
+        margin: -0,01%;
+            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
+              height: 32px;  
+            }
+        }
 }
 @media (min-width: 576px) {
     .container-main-gallery-flip-card {
@@ -102,12 +107,7 @@
             }
         }
     }
-    .container-item-filter-btn {
-        margin: -0,01%;
-            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
-              height: 31px;  
-            }
-}
+
 @media (min-width: 768px) {
     .container-main-gallery-flip-card {
         width: 35%;
@@ -116,12 +116,6 @@
                 height: auto
             }
     }
-    .container-item-filter-btn {
-        margin: -0,01%;
-            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
-              height: 32px;  
-            }
-        }
 }
 @media (min-width: 820px) {
     .container-main-gallery-flip-card {
@@ -131,12 +125,6 @@
                 height: auto
             }
     }
-    .container-item-filter-btn {
-        margin: -0,01%;
-            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
-              height: 31px;  
-            }
-        }
 }
 @media (min-width: 912px) {
     .container-main-gallery-flip-card {
@@ -146,12 +134,6 @@
                 height: auto
             }
     }
-    .container-item-filter-btn {
-        margin: -0,01%;
-            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
-              height: 29px;  
-            }
-    }
 }
 @media (min-width: 1020px){
     .container-main-gallery-flip-card {
@@ -159,6 +141,12 @@
             &-front-img {
                 max-width: 79%;
                 height: auto
+            }
+    }
+    .container-item-filter-btn {
+        margin: -0,01%;
+            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
+              height: 34px;  
             }
     }
 }
