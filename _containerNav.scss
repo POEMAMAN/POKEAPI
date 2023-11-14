@@ -1,0 +1,79 @@
+.container-nav {
+    z-index: 1;
+    overflow: hidden;
+    background-color: #7c5699e1;
+    position: sticky; 
+    top: 0; 
+    display: block;
+    width: 100vw;
+    height: 20%;
+    padding: 10px;
+    background-image: url("/POKEAPI/styles/icons/Balls.webp");
+    // background-attachment: fixed;
+    &-pokeIcon {
+      width: 70%;
+      margin: 0 15% 0 15%;
+      max-block-size: 0%;
+    }
+    &-search {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+        &-button {
+          background-image: url("");
+        }
+    }
+}
+
+// media-queries
+@media (min-width: 411px) {
+
+}
+@media (min-width: 576px) {
+  .container-nav-search-input, .container-nav-search-button {
+    width: 40%;
+    height: 40px;
+    font-size: 20px;
+    background-image: url("/POKEAPI/styles/icons/fondopaisajes.jpeg");
+    color: whitesmoke;}
+.container-nav-search-button {
+    border-color: aqua;
+    border-radius: 5px 5px 5px 5px;
+}
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 820px) {
+  .container-nav {
+    width: 100vw;
+    padding-bottom: 15px;
+    height: 5%;
+    &-pokeIcon {
+      height: 1%;
+      margin: 0 15% 0 15%;
+    }
+    &-search-input, &-search-button {
+        width: 40%;
+        height: 45px;
+        font-size: 20px;
+    }
+  }
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1020px){
+}
+@media (min-width: 1160px){
+}
+@media (min-width: 1300px){
+}
+@media (min-width: 1450px){
+}
+@media (min-width: 1625px){
+}
+@media (min-width: 1750px){
+}
+@media (min-width: 1825px){
+}
+@media (min-width: 1900px){
+}

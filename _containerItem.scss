@@ -1,0 +1,323 @@
+.container-item {
+    margin-top: 5px;
+    display: flex;
+    width: 100vw;
+    background-image: url("/POKEAPI/styles/icons/fondoprincipaGrisl.png");
+    &-filter {
+        width: 6vw;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        &-btn {
+            display: flex;
+            flex-direction: column;
+            &-bug, &-dark, &-electric, &-fairy, &-fighting, &-fire, &-ghost, &-grass, &-ground, &-ice, &-normal, &-poison, &-physic, &-rock, &-steel, &-water, &-dragon, &-flying {
+                transition: transform .10s; 
+               margin-left: 100%;
+                width: 35px;
+                height: 35px;
+                background-size: cover;
+                background-color: transparent;
+                border: none; 
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+            }
+          
+            &-bug:hover, &-dark:hover, &-electric:hover, &-fairy:hover, &-fighting:hover, &-fire:hover, &-ghost:hover, &-grass:hover, &-ground:hover, &-ice:hover, &-normal:hover, &-poison:hover, &-physic:hover, &-rock:hover, &-steel:hover, &-water:hover {
+                transform: scale(1.5);
+            }
+        }
+    }
+}
+
+.types {
+    display: flex;
+    margin-bottom: -30%;
+}
+.container-main-gallery {
+    width: 90vw;
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+//Flipd Card//
+.container-main-gallery-flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid goldenrod;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    width: 70%;
+    margin: 5px 5px 5px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    box-shadow: 0 6px 10px 0 goldenrod;
+    background-image: url("/POKEAPI/styles/icons/pokebolaabierta.png");
+    background-repeat: no-repeat;
+    background-size: 60%;
+        &-front {
+            background-color: transparent;
+            color: black;
+            max-width: 70%;
+                &-img {
+                max-width: 90%;
+                height: auto
+                }
+                &-name {
+                    display: flex;
+                    justify-content: center;
+                }
+        }
+    }
+
+.container-main-gallery-flip-card-back {
+    background-color: rgba(79, 77, 80, 0.418);
+    color: white;
+    max-width: 110%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items:stretch;
+}
+
+
+// media-queries
+@media (min-width: 411px) {
+
+}
+@media (min-width: 576px) {
+    .container-main-gallery-flip-card {
+        width: 77%;
+            &-front-img {
+                max-width: 60%;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    .container-item-filter-btn {
+        margin: -0,01%;
+            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
+              height: 31px;  
+            }
+}
+@media (min-width: 768px) {
+    .container-main-gallery-flip-card {
+        width: 35%;
+            &-front-img {
+                max-width: 100%;
+                height: auto
+            }
+    }
+    .container-item-filter-btn {
+        margin: -0,01%;
+            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
+              height: 32px;  
+            }
+        }
+}
+@media (min-width: 820px) {
+    .container-main-gallery-flip-card {
+        width: 35%;
+            &-front-img {
+                max-width: 90%;
+                height: auto
+            }
+    }
+    .container-item-filter-btn {
+        margin: -0,01%;
+            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
+              height: 31px;  
+            }
+        }
+}
+@media (min-width: 912px) {
+    .container-main-gallery-flip-card {
+        width: 30%;
+            &-front-img {
+                max-width: 90%;
+                height: auto
+            }
+    }
+    .container-item-filter-btn {
+        margin: -0,01%;
+            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
+              height: 29px;  
+            }
+    }
+}
+@media (min-width: 1020px){
+    .container-main-gallery-flip-card {
+        width: 30%;
+            &-front-img {
+                max-width: 79%;
+                height: auto
+            }
+    }
+}
+@media (min-width: 1160px){
+    .container-main-gallery-flip-card {
+        width: 30%;
+            &-front-img {
+                max-width: 67%;
+                height: auto
+            }
+    }
+    .container-item-filter-btn {
+        margin: -0,01%;
+            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
+              height: 26px;  
+            }
+    }
+}
+@media (min-width: 1300px){
+    .container-main-gallery-flip-card {
+        width: 24%;
+            &-front-img {
+                max-width: 80%;
+                height: auto
+            }
+    }
+    .container-item-filter-btn {
+        margin: -0,01%;
+            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
+              height: 25px;  
+            }
+    }
+}
+@media (min-width: 1450px){
+    .container-main-gallery-flip-card {
+        width: 24%;
+            &-front-img {
+                max-width: 70%;
+                height: auto
+            }
+    }
+}
+@media (min-width: 1625px){
+    .container-main-gallery-flip-card {
+        width: 24%;
+            &-front-img {
+                max-width: 65%;
+                height: auto
+            }
+    }
+    .container-item-filter-btn {
+        margin: -0,01%;
+            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
+              height: 23px;  
+            }
+        }
+}
+@media (min-width: 1750px){
+    .container-main-gallery-flip-card {
+        width: 23%;
+    }
+    .container-item-filter-btn {
+        margin: -0,01%;
+            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
+              height: 29px;  
+            }
+        }
+}
+@media (min-width: 1825px){
+    .container-main-gallery-flip-card {
+        width: 23%;
+    }
+    .container-item-filter-btn {
+        margin: -0,01%;
+            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
+              height: 29px;  
+            }
+        }
+}
+@media (min-width: 1920px){
+    .container-main-gallery-flip-card {
+        width: 23%;
+            &-front-img {
+                max-width: 62%;
+                height: auto
+            }
+    }
+    .container-item-filter-btn {
+        margin: -0,01%;
+            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
+              height: 41px;  
+            }
+        }
+}
+@media (min-width: 2560px){
+    .container-main-gallery-flip-card {
+        width: 15%;
+            &-front-img {
+                max-width: 64%;
+                height: auto
+            }
+    }
+    .container-item-filter-btn {
+        margin: -0,01%;
+            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
+              height: 61px;  
+            }
+        }
+}
+@media (min-width: 3440px){
+    .container-main-gallery-flip-card {
+        width: 10%;
+        margin-bottom: 1%;
+        height: max-content;
+            &-front-img {
+                max-width: 54%;
+                height: auto
+            }
+    }
+    .container-item-filter-btn {
+        margin: 15%;
+            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
+              height: 100px;  
+            }
+        }
+}
+@media (min-width: 3840px){
+    .container-main-gallery-flip-card {
+            &-front-img {
+                max-width: 69%;
+                height: auto
+            }
+    }
+    .container-item-filter-btn {
+        margin: 15%;
+            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
+              height: 110px;  
+            }
+        }
+}
+@media (min-width: 4500px){
+    .container-main-gallery-flip-card {
+            &-front-img {
+                max-width: 54%;
+                height: auto
+            }
+    }
+}
+@media (min-width: 5500px){
+    .container-main-gallery-flip-card {
+            &-front-img {
+                max-width: 58%;
+                height: auto
+            }
+    }
+    .container-item-filter-btn {
+        margin: 15%;
+            &-dark,&-bug,&fairy,&-figthing,&-fire,&-ghost,&-grass,&-ground,&-ice,&-normal,&-physic,&-rock,&-steel,&-water,&-flying,&-dragon,&-poison {
+              height: 130px;  
+            }
+        }
+}
