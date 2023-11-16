@@ -2,7 +2,7 @@
     margin-top: 5px;
     display: flex;
     width: 100vw;
-    background-image: url("/POKEAPI/styles/icons/fondoprincipaGrisl.png");
+    background-image: url("/POKEAPI/ASSETS/fondoprincipaGris.png");
     &-filter {
         width: 6vw;
         position: fixed;
@@ -56,7 +56,7 @@
     flex-direction: row;
     justify-content: flex-end;
     box-shadow: 0 6px 10px 0 goldenrod;
-    background-image: url("/POKEAPI/styles/icons/pokebolaabierta.png");
+    background-image: url("/POKEAPI/ASSETS/pokebolaabierta.png");
     background-repeat: no-repeat;
     background-size: 60%;
         &-front {

@@ -4,6 +4,7 @@ const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
 const pokeId = 1017;
 let urlTypes = "https://pokeapi.co/api/v2/type/";
 
+
 //fetch y filtros//
 let pokeList = [];
 const getPokemon = async (url) => {
@@ -20,6 +21,7 @@ const getPokemon = async (url) => {
 }
 
 console.log(pokeList);
+
 
 //Funcion de pintado general//
 const paintPokemons = (pokemons) => {
@@ -86,10 +88,12 @@ const init = async () => {
     
 }
 
+
 //Busqueda Individual//
 const button$$ = document.querySelector('.container-nav-search-button');
 button$$.addEventListener('click', clickBtn);
  
+
 async function clickBtn () {
     //Busqueda por Nombre exacto//
     try {
@@ -186,6 +190,7 @@ const individualPaint = (data) => {
 }
 init()
 
+
 //Eventos botones Filtros Typo y funcion busqueda//
 
   //Prueba filtro boton, no consigo que pinte la ficha//
@@ -216,8 +221,7 @@ buttonBug$$.addEventListener('click', lookForTypesBug);
 // const buttonFighting$$ = document.querySelector('.container-item-filter-btn-fighting');
 // button$$.addEventListener('click', lookForTypes);
 
+
 //Boton Reinicio//
 const reloaded = document.querySelector(".container-nav-pokeIcon");
 reloaded.addEventListener('click',init);
-
-

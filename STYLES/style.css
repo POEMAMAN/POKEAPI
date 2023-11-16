@@ -23,7 +23,7 @@
   width: 100vw;
   height: 20%;
   padding: 10px;
-  background-image: url("/POKEAPI/styles/icons/Balls.webp");
+  background-image: url("/POKEAPI/ASSETS/fondopaisajes.jpeg");
 }
 .container-nav-pokeIcon {
   width: 70%;
@@ -49,7 +49,7 @@
     width: 50%;
     height: 30px;
     font-size: 15px;
-    background-image: url("/POKEAPI/styles/icons/fondopaisajes.jpeg");
+    background-image: url("/POKEAPI/ASSETS/fondopaisajes.jpeg");
     color: whitesmoke;
   }
   .container-nav-search-button {
@@ -62,7 +62,7 @@
     width: 40%;
     height: 40px;
     font-size: 20px;
-    background-image: url("/POKEAPI/styles/icons/fondopaisajes.jpeg");
+    background-image: url("/POKEAPI/ASSETS/fondopaisajes.jpeg");
     color: whitesmoke;
   }
   .container-nav-search-button {
@@ -90,7 +90,7 @@
   .container-nav-search-input, .container-nav-search-button {
     height: 60px;
     font-size: 46px;
-    background-image: url("/POKEAPI/styles/icons/fondopaisajes.jpeg");
+    background-image: url("/POKEAPI/ASSETS/fondopaisajes.jpeg");
     color: whitesmoke;
   }
   .container-nav-search-button {
@@ -102,7 +102,7 @@
   .container-nav-search-input, .container-nav-search-button {
     height: 60px;
     font-size: 60px;
-    background-image: url("/POKEAPI/styles/icons/fondopaisajes.jpeg");
+    background-image: url("/POKEAPI/ASSETS/fondopaisajes.jpeg");
     color: whitesmoke;
   }
   .container-nav-search-button {
@@ -120,7 +120,7 @@
   margin-top: 5px;
   display: flex;
   width: 100vw;
-  background-image: url("/POKEAPI/styles/icons/fondoprincipaGrisl.png");
+  background-image: url("/POKEAPI/ASSETS/fondoprincipaGris.png");
 }
 .container-item-filter {
   width: 6vw;
@@ -173,7 +173,7 @@
   flex-direction: row;
   justify-content: flex-end;
   box-shadow: 0 6px 10px 0 goldenrod;
-  background-image: url("/POKEAPI/styles/icons/pokebolaabierta.png");
+  background-image: url("/POKEAPI/ASSETS/pokebolaabierta.png");
   background-repeat: no-repeat;
   background-size: 60%;
 }
