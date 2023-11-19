@@ -22,7 +22,6 @@ const getPokemon = async (url) => {
 
 console.log(pokeList);
 
-
 //Funcion de pintado general//
 const paintPokemons = (pokemons) => {
     for (const pokemon of pokemons) {
@@ -81,6 +80,13 @@ const paintPokemons = (pokemons) => {
 
 //funcion de control de pagina
 const init = async () => {
+    let global$$ = document.getElementById('container-global');
+    let loadingSet$$ = document.getElementById('loading');
+    setTimeout(function() {
+    console.log('loading');
+    loadingSet$$.classList.add('hidden');
+    global$$.classList.remove('hidden');
+    }, 2000)
     let pokemonData = await getPokemon(baseUrl);
     paintPokemons(pokemonData)
     console.log(pokemonData);

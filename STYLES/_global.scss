@@ -4,15 +4,36 @@
     box-sizing: border-box;
     list-style: none;           
 }
+//Loading//
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
 
+.loading>img {
+  z-index: 99999999;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+}
+
+
+  //End Loader//
+
+//other//
 .hidden {
     display: none;
   }
-  .container-main-gallery-flip-card-back-types-content {
-    content: "Grass";
+  // .container-main-gallery-flip-card-back-types-content {
+  //   content: "Grass";
     
 
-  }
+  // }
 
 
 // media-queries
