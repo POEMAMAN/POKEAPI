@@ -122,24 +122,62 @@ async function clickBtn () {
             individualPaint(json)
         }
         catch (error) {
-            //Busqueda por Tipo de Pokemon//
-            // try {
-            //     let pokemonData$ = [];
-            //     for (let i = 0; i <300; i++){
-            //         let response = await fetch(urlTypes + value);
-            //         let data = await response.json();
-            //         pokemonTypes$.push(data);
-            //         let pokemonMapped = mapData(pokemonTypes$);
-            //         paintPokemons(pokemonMapped);  
-            //     }
-            // }
-            //     catch (error) {
-            //     alert("No se encuentra el pokemon", error);
-            //     init();
+            noPokemon()
             }
         }
     }
 
+const noPokemon = () => {
+    const input$$ = document.querySelector('input')
+    const value = input$$.value.toLowerCase();
+    const pokemonContainer$$ = document.querySelector(".container-main-gallery");
+    pokemonContainer$$.innerHTML = "";  
+    const flipCard$$ = document.createElement("div");
+    flipCard$$.setAttribute('class' ,'container-main-gallery-flip-card');
+    pokemonContainer$$.appendChild(flipCard$$);
+
+    const flipCardFront$$ = document.createElement("div");
+    flipCardFront$$.setAttribute('class','container-main-gallery-flip-card-front');
+    flipCard$$.appendChild(flipCardFront$$);
+
+    const flipCardFrontImg$$ = document.createElement("img");
+    flipCardFrontImg$$.setAttribute('class','container-main-gallery-flip-card-front-img');
+    flipCardFrontImg$$.src = "/POKEAPI/ASSETS/nopokemon.png";
+    flipCardFrontImg$$.style = "width:100px; height:100px;";
+    flipCardFront$$.appendChild(flipCardFrontImg$$);
+
+    const flipCardFrontName$$ = document.createElement("h2");
+    flipCardFrontName$$.setAttribute('class','container-main-gallery-flip-card-front-name');
+    flipCardFrontName$$.textContent = `The pokemon "${value}" hasn't been born`;
+    flipCardFrontName$$.style.fontSize = "20px";
+    flipCardFront$$.appendChild(flipCardFrontName$$);
+
+    const flipCardBack$$ = document.createElement("div");
+    flipCardBack$$.setAttribute('class','container-main-gallery-flip-card-back');
+
+    flipCard$$.appendChild(flipCardBack$$);
+
+    const flipCardBackStatsName$$ = document.createElement("H2");
+    flipCardBackStatsName$$.setAttribute('class','container-main-gallery-flip-card-back-stats-name');
+    flipCardBackStatsName$$.textContent = "STATS";
+    flipCardBack$$.appendChild(flipCardBackStatsName$$);
+        
+    const flipCardBackStats$$ = document.createElement("p");
+    flipCardBackStats$$.setAttribute('class','container-main-gallery-flip-card-back-stats-content');
+    flipCardBackStats$$.textContent = 'Egg Powers'
+    flipCardBack$$.appendChild(flipCardBackStats$$);
+
+    const flipCardBackTypesName$$ = document.createElement("H2");
+    flipCardBackTypesName$$.setAttribute('class','container-main-gallery-flip-card-back-types-name');
+    flipCardBackTypesName$$.textContent = "TYPES";
+    flipCardBack$$.appendChild(flipCardBackTypesName$$);
+
+    const flipCardBackTypes$$ = document.createElement("p");
+    flipCardBackTypes$$.setAttribute('class','container-main-gallery-flip-card-back-types-content');
+    flipCardBackTypes$$.textContent = 'Egg';
+    flipCardBack$$.appendChild(flipCardBackTypes$$);
+}
+    
 
  
 const individualPaint = (data) => {
@@ -199,6 +237,46 @@ init()
 
 //Eventos botones Filtros Typo y funcion busqueda//
 
+    //select//
+window.addEventListener('load', function() {
+    // Obtener select
+    let sel = document.querySelector('#exampleFormControlSelect1');
+    // Crear lista y agregar clase
+    let ul = document.createElement('ul');
+    ul.className = 'ul-sel';
+    // Recorrer opciones del select
+    for(let i = 0; i < sel.options.length; i++) {
+        // Crear elemento de lista y agregar clase
+        let li = document.createElement('li');
+        li.className = 'li-option';
+        // ¿La opción actual está seleccionada? Aplicar al elemento de lista
+        if(sel.options[i].selected) {
+            li.classList.add('selected');
+        }
+        // Agregar contenido y estilo desde opción
+        li.innerText = sel.options[i].innerText;
+        li.style = sel.options[i].dataset.style;
+        // Actualizar valor del select al hacer clic en elemento de lista
+        li.addEventListener('click', function() {
+            // Remover clase seleccionada de opción anterior
+            ul.querySelector('.selected').classList.remove('selected');
+            // Seleccionar opción actual
+            this.classList.add('selected');
+            // Actualizar valor del select
+            sel.value = this.innerText;
+        });
+        // Agregar elemento a lista
+        ul.appendChild(li);
+    }
+    // Agregar lista, justo después del select
+    sel.parentNode.insertBefore(ul, sel.nextSibling);
+    // Posicionar lista sobre el select
+    ul.style.top = sel.offsetTop + 'px';
+    ul.style.left = sel.offsetLeft + 'px';
+    // Ocultar select
+    sel.style.display = 'none';
+});
+
   //Prueba filtro boton, no consigo que pinte la ficha//
 async function lookForTypesBug () {
     try {
@@ -212,21 +290,6 @@ async function lookForTypesBug () {
         init();
       }
 }
-
-const buttonBug$$ = document.querySelector(".container-item-filter-btn-bug");
-let valueTypesBug = buttonBug$$.getAttribute('id');
-buttonBug$$.addEventListener('click', lookForTypesBug);
-
-    //Resto de botones desactivados//
-// const buttonBug$$ = document.querySelector("#bug");
-// buttonBug$$.addEventListener('click', lookForTypes(pokeList));
-// const buttonDark$$ = document.querySelector('.container-item-filter-btn-dark');
-// button$$.addEventListener('click', lookForTypes);
-// const buttonFairy$$ = document.querySelector('.container-item-filter-btn-fairy');
-// button$$.addEventListener('click', lookForTypes);
-// const buttonFighting$$ = document.querySelector('.container-item-filter-btn-fighting');
-// button$$.addEventListener('click', lookForTypes);
-
 
 //Boton Reinicio//
 const reloaded = document.querySelector(".container-nav-pokeIcon");
